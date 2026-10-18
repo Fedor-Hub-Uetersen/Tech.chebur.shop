@@ -1,15 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Главная страница -->
     <url>
         <loc>https://tech.chebur.shop/</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>daily</changefreq>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- Раздел GPS / SOS-ID -->
     <url>
-        <loc>https://tech.chebur.shop/shop/</loc>
-        <lastmod>2026-07-22</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
+        <loc>https://sos-id.online/</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
+
+    <!-- Интерактивная карта (прямой адрес сервера из разметки) -->
+    <url>
+        <loc>http://167.233.34.109:5000/map</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Телеграм-бот: Таможенный калькулятор -->
+    <url>
+        <loc>https://t.me/super_vanja_bot</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Телеграм-бот: Ассистент диабетика -->
+    <url>
+        <loc>https://t.me/Fritz_Gemeni_bot</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Утилита: Оптимизатор картинок -->
+    <url>
+        <loc>https://resizer.chebur.shop/</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Утилита: Оптимизатор паролей -->
+    <url>
+        <loc>https://passwortgenerator.chebur.shop/</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Творческая мастерская: Медицинский/технический поддомен -->
+    <url>
+        <loc>https://tech.med.chebur.shop/</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Творческая мастерская: Йога -->
+    <url>
+        <loc>https://Yoga.chebur.shop/</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Дополнительный проект из футера -->
+    <url>
+        <loc>https://fedorcheb.chebur.shop/</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
 </urlset>

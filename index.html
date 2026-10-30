@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" id="html-root">
+<html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
         
         header { text-align: center; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 20px; }
         
-        /* Живой логотип волка с поддержкой 3D и пульсации */
+        /* Live 3D wolf logo with neon pulse */
         .logo { 
             width: 300px; 
             display: block; 
@@ -31,7 +31,6 @@
             animation: neonPulse 4s infinite ease-in-out;
         }
 
-        /* Эффект живого неонового дыхания волка */
         @keyframes neonPulse {
             0% {
                 filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.3)) brightness(0.95);
@@ -56,7 +55,6 @@
         .project-card a { color: #00ffff; text-decoration: none; font-weight: bold; }
         .project-card a:hover { text-decoration: underline; }
         
-        /* Стилизация подсвеченного адреса в футере */
         .footer-address {
             color: #00ffff;
             font-weight: bold;
@@ -65,7 +63,7 @@
         
         footer { margin-top: 50px; font-size: 0.9em; text-align: center; color: #888; }
 
-        /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО РЕКЛАМНОГО БАННЕРА */
+        /* DROP-DOWN AD BANNER STYLES */
         .adv-banner {
             position: fixed;
             top: -120px;
@@ -118,7 +116,6 @@
             text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
         }
 
-        /* Анимированная стрелочка перехода */
         .adv-arrow {
             display: inline-block;
             color: #00ffff;
@@ -153,10 +150,10 @@
 </head>
 <body>
 
-    <!-- ВЫПАДАЮЩИЙ БАННЕР С ПОЯСНИТЕЛЬНОЙ НАДПИСЬЮ И СТРЕЛКОЙ -->
+    <!-- DROP-DOWN BANNER -->
     <div id="advBanner" class="adv-banner">
         <a href="https://Diabet-diary.chebur.shop" target="_blank" rel="noopener noreferrer" class="adv-link">
-            <span class="adv-subtitle">Дневник контроля сахара и питания:</span>
+            <span class="adv-subtitle">Blood Sugar & Nutrition Diary:</span>
             <span class="adv-text"><span>Diabetdiary</span> <span class="adv-arrow">&rarr;</span></span>
         </a>
         <button class="adv-close" onclick="closeBanner(event)">&times;</button>
@@ -164,12 +161,12 @@
 
     <header>
         <img src="logo.png" alt="Tech.Chebur.Shop" class="logo">
-        <p>Системы мониторинга и технического обеспечения</p>
+        <p>Monitoring and Technical Systems</p>
     </header>
 
     <div class="project-card">
-        <h2>GPS-отслеживание</h2>
-        <p>Профессиональная система мониторинга и безопасности.</p>
+        <h2>GPS Tracking</h2>
+        <p>Professional monitoring and security system.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
             <a href="https://sos-id.online" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">SOS-ID</a>
@@ -178,28 +175,28 @@
     </div>
 
     <div class="project-card">
-        <h2>Наши боты</h2>
-        <p>Журналы событий, боты, конфигурации и проектная документация.</p>
+        <h2>Our Bots</h2>
+        <p>Logs, bots, configurations, and project documentation.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://t.me/super_vanja_bot" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Бот-калькулятор таможенных пошлин</a>
-            <a href="https://t.me/Fritz_Gemeni_bot" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Бот-помощник для диабетиков</a>
+            <a href="https://t.me/super_vanja_bot" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Customs Calculator Bot</a>
+            <a href="https://t.me/Fritz_Gemeni_bot" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Diabetes Assistant Bot</a>
         </div>
     </div>
 
     <div class="project-card">
-        <h2>Полезные утилиты</h2>
-        <p>Инструменты для ежедневных задач и оптимизации медиафайлов.</p>
+        <h2>Useful Utilities</h2>
+        <p>Useful tools for daily tasks and media optimization.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://resizer.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Оптимизатор изображений</a>
-            <a href="https://passwortgenerator.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Генератор паролей</a>
+            <a href="https://resizer.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Image Optimizer</a>
+            <a href="https://passwortgenerator.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Password Generator</a>
         </div>
     </div>
 
     <div class="project-card">
-        <h2>Наша творческая мастерская</h2>
-        <p>Создание рекламных материалов и видеоконтента.</p>
+        <h2>Our Creative Studio</h2>
+        <p>Creation of commercials and video content.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
             <a href="https://tech.med.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">tech.med.chebur.shop</a>
@@ -208,13 +205,13 @@
     </div>
 
     <div class="project-card">
-        <h2>О проекте</h2>
-        <p>Мы специализируемся на разработке, развертывании и поддержке современных технических систем, специализированных Telegram-ботов и веб-утилит для оптимизации процессов. В рамках нашей творческой мастерской мы объединяем программные решения, серверную логику и мультимедийные инструменты для автоматизации и эффективного решения задач пользователей.</p>
+        <h2>About the Project</h2>
+        <p>We specialize in the development, deployment, and maintenance of modern technical systems, specialized Telegram bots, and web utilities for process optimization. As part of our creative studio, we combine software solutions, server logic, and multimedia tools to automate and efficiently solve user tasks.</p>
     </div>
 
     <div class="project-card">
-        <h2>Контакты</h2>
-        <p>Свяжитесь со мной через WhatsApp или по электронной почте:</p>
+        <h2>Contacts</h2>
+        <p>Contact me via WhatsApp or email:</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
             <a href="https://wa.me/49017661566343" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">WhatsApp</a>
@@ -227,7 +224,7 @@
     </footer>
 
     <script>
-        /* Интерактивная логика 3D-наклона волка */
+        /* Interactive 3D wolf logo tilt logic */
         const logo = document.querySelector('.logo');
         
         document.addEventListener('mousemove', (e) => {
@@ -254,7 +251,7 @@
             logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
         });
 
-        /* ЛОГИКА РАБОТЫ РЕКЛАМНОГО БАННЕРА */
+        /* AD BANNER LOGIC */
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 document.getElementById('advBanner').classList.add('show');

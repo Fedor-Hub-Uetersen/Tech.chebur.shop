@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="html-root">
+<html lang="ru" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +68,7 @@
         /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО РЕКЛАМНОГО БАННЕРА */
         .adv-banner {
             position: fixed;
-            top: -100px;
+            top: -120px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
@@ -87,17 +87,48 @@
             top: 0;
         }
 
+        .adv-link {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .adv-subtitle {
+            font-size: 0.9em;
+            color: #cbd5e1;
+            font-weight: normal;
+        }
+
         .adv-text {
             color: #fff;
             font-size: 1.1em;
             font-weight: bold;
             margin: 0;
             letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .adv-text span {
             color: #00ffff;
             text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        /* Анимированная стрелочка перехода */
+        .adv-arrow {
+            display: inline-block;
+            color: #00ffff;
+            font-size: 1.2em;
+            animation: bounceArrow 1.5s infinite ease-in-out;
+        }
+
+        @keyframes bounceArrow {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(6px); }
         }
 
         .adv-close {
@@ -112,6 +143,7 @@
             cursor: pointer;
             line-height: 1;
             transition: color 0.2s;
+            z-index: 1001;
         }
 
         .adv-close:hover {
@@ -121,20 +153,23 @@
 </head>
 <body>
 
-    <!-- ВЫПАДАЮЩИЙ БАННЕР -->
+    <!-- ВЫПАДАЮЩИЙ БАННЕР С ПОЯСНИТЕЛЬНОЙ НАДПИСЬЮ И СТРЕЛКОЙ -->
     <div id="advBanner" class="adv-banner">
-        <p class="adv-text"><span>Your ad could be here!</span></p>
-        <button class="adv-close" onclick="closeBanner()">&times;</button>
+        <a href="https://Diabet-diary.chebur.shop" target="_blank" rel="noopener noreferrer" class="adv-link">
+            <span class="adv-subtitle">Дневник контроля сахара и питания:</span>
+            <span class="adv-text"><span>Diabetdiary</span> <span class="adv-arrow">&rarr;</span></span>
+        </a>
+        <button class="adv-close" onclick="closeBanner(event)">&times;</button>
     </div>
 
     <header>
         <img src="logo.png" alt="Tech.Chebur.Shop" class="logo">
-        <p>Monitoring and Technical Systems</p>
+        <p>Системы мониторинга и технического обеспечения</p>
     </header>
 
     <div class="project-card">
-        <h2>GPS Tracking</h2>
-        <p>Professional monitoring and security system.</p>
+        <h2>GPS-отслеживание</h2>
+        <p>Профессиональная система мониторинга и безопасности.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
             <a href="https://sos-id.online" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">SOS-ID</a>
@@ -143,92 +178,8 @@
     </div>
 
     <div class="project-card">
-        <h2>Our Bots</h2>
-        <p>Logs, bots, configurations, and project documentation.</p>
+        <h2>Наши боты</h2>
+        <p>Журналы событий, боты, конфигурации и проектная документация.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://t.me/super_vanja_bot" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Customs Calculator Bot</a>
-            <a href="https://t.me/Fritz_Gemeni_bot" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Diabetes Assistant Bot</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <h2>Useful Utilities</h2>
-        <p>Useful tools for daily tasks and media optimization.</p>
-        
-        <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://resizer.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Image Optimizer</a>
-            <a href="https://passwortgenerator.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Password Generator</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <h2>Our Creative Studio</h2>
-        <p>Creation of commercials and video content.</p>
-        
-        <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://tech.med.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">tech.med.chebur.shop</a>
-            <a href="https://Yoga.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Yoga.chebur.shop</a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <h2>About the Project</h2>
-        <p>We specialize in the development, deployment, and maintenance of modern technical systems, specialized Telegram bots, and web utilities for process optimization. As part of our creative studio, we combine software solutions, server logic, and multimedia tools to automate and efficiently solve user tasks.</p>
-    </div>
-
-    <div class="project-card">
-        <h2>Contacts</h2>
-        <p>Contact me via WhatsApp or email:</p>
-        
-        <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://wa.me/49017661566343" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">WhatsApp</a>
-            <a href="mailto:tech.chebur@gmail.com" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Email</a>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 <a href="https://fedorcheb.chebur.shop" style="color: #00ffff; text-decoration: none; font-weight: bold;">fedorcheb.chebur.shop</a>. <span class="footer-address">Uetersen, Germany.</span>
-    </footer>
-
-    <script>
-        /* Интерактивная логика 3D-наклона волка */
-        const logo = document.querySelector('.logo');
-        
-        document.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-            const xRotation = ((clientY - innerHeight / 2) / innerHeight) * 30;
-            const yRotation = ((clientX - innerWidth / 2) / innerWidth) * -30;
-            logo.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.05)`;
-        });
-
-        document.addEventListener('mouseleave', () => {
-            logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-        });
-        
-        logo.addEventListener('touchmove', (e) => {
-            const touch = e.touches[0];
-            const { innerWidth, innerHeight } = window;
-            const xRotation = ((touch.clientY - innerHeight / 2) / innerHeight) * 20;
-            const yRotation = ((touch.clientX - innerWidth / 2) / innerWidth) * -20;
-            logo.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.05)`;
-        });
-        
-        logo.addEventListener('touchend', () => {
-            logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-        });
-
-        /* ЛОГИКА РАБОТЫ РЕКЛАМНОГО БАННЕРА */
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.getElementById('advBanner').classList.add('show');
-            }, 1500); 
-        });
-
-        function closeBanner() {
-            document.getElementById('advBanner').classList.remove('show');
-        }
-    </script>
-</body>
-</html>
+            <a href="

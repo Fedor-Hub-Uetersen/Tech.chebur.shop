@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" id="html-root">
+<html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
         
         header { text-align: center; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 20px; }
         
-        /* Обновленный живой логотип волка с поддержкой 3D и пульсации */
+        /* Живой логотип волка с поддержкой 3D и пульсации */
         .logo { 
             width: 300px; 
             display: block; 
@@ -43,9 +43,6 @@
                 filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.3)) brightness(0.95);
             }
         }
-
-        .lang-switch { text-align: center; margin-bottom: 20px; }
-        .lang-switch a { cursor: pointer; color: #00ffff; text-decoration: underline; margin: 0 10px; font-weight: bold; }
         
         .project-card { 
             background: rgba(20, 20, 20, 0.85); 
@@ -71,7 +68,7 @@
         /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО РЕКЛАМНОГО БАННЕРА */
         .adv-banner {
             position: fixed;
-            top: -100px; /* Изначально спрятан выше экрана */
+            top: -100px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
@@ -79,15 +76,15 @@
             background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(20, 20, 20, 0.95));
             border: 2px solid #00ffff;
             box-shadow: 0 5px 25px rgba(0, 255, 255, 0.4);
-            border-radius: 0 0 15px 15px; /* Скругление только снизу */
+            border-radius: 0 0 15px 15px;
             padding: 15px 40px 15px 20px;
             text-align: center;
             z-index: 1000;
-            transition: top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Плавное выпадание с отскоком */
+            transition: top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .adv-banner.show {
-            top: 0; /* Выезжает сверху */
+            top: 0;
         }
 
         .adv-text {
@@ -126,72 +123,67 @@
 
     <!-- ВЫПАДАЮЩИЙ БАННЕР -->
     <div id="advBanner" class="adv-banner">
-        <p id="adv-text-content" class="adv-text">Your ad could be here! | <span>Здесь может быть Ваша реклама!</span></p>
+        <p class="adv-text"><span>Your ad could be here!</span></p>
         <button class="adv-close" onclick="closeBanner()">&times;</button>
-    </div>
-
-    <div class="lang-switch">
-        <a onclick="setLang('ru')">RU</a> | <a onclick="setLang('en')">EN</a>
     </div>
 
     <header>
         <img src="logo.png" alt="Tech.Chebur.Shop" class="logo">
-        <p id="subtitle">Monitoring and Technical Systems</p>
+        <p>Monitoring and Technical Systems</p>
     </header>
 
     <div class="project-card">
-        <h2 id="gps-title">GPS Tracking</h2>
-        <p id="gps-desc">Professional monitoring and security system.</p>
+        <h2>GPS Tracking</h2>
+        <p>Professional monitoring and security system.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://sos-id.online" id="panel-btn" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">SOS-ID</a>
+            <a href="https://sos-id.online" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">SOS-ID</a>
             <a href="http://pet.sos-id.online" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Pet-Hub</a>
         </div>
     </div>
 
     <div class="project-card">
-        <h2 id="arch-title">Our Bots</h2>
-        <p id="arch-desc">Logs, bots, configurations, and project documentation.</p>
+        <h2>Our Bots</h2>
+        <p>Logs, bots, configurations, and project documentation.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://t.me/super_vanja_bot" id="arch-sos-btn" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Customs Calculator Bot</a>
-            <a href="https://t.me/Fritz_Gemeni_bot" id="arch-link-btn" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Diabetes Assistant Bot</a>
+            <a href="https://t.me/super_vanja_bot" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Customs Calculator Bot</a>
+            <a href="https://t.me/Fritz_Gemeni_bot" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Diabetes Assistant Bot</a>
         </div>
     </div>
 
     <div class="project-card">
-        <h2 id="new1-title">Useful Utilities</h2>
-        <p id="new1-desc">Useful tools for daily tasks and media optimization.</p>
+        <h2>Useful Utilities</h2>
+        <p>Useful tools for daily tasks and media optimization.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://resizer.chebur.shop" id="new1-btn1" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Image Optimizer</a>
-            <a href="https://passwortgenerator.chebur.shop" id="new1-btn2" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Password Generator</a>
+            <a href="https://resizer.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Image Optimizer</a>
+            <a href="https://passwortgenerator.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Password Generator</a>
         </div>
     </div>
 
     <div class="project-card">
-        <h2 id="new2-title">Our Creative Studio</h2>
-        <p id="new2-desc">Creation of commercials and video content.</p>
+        <h2>Our Creative Studio</h2>
+        <p>Creation of commercials and video content.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://tech.med.chebur.shop" id="new2-btn1" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">tech.med.chebur.shop</a>
-            <a href="https://Yoga.chebur.shop" id="new2-btn2" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Yoga.chebur.shop</a>
+            <a href="https://tech.med.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">tech.med.chebur.shop</a>
+            <a href="https://Yoga.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Yoga.chebur.shop</a>
         </div>
     </div>
 
-    <!-- ДЕЛОВОЙ РАЗДЕЛ О ПРОЕКТЕ -->
     <div class="project-card">
-        <h2 id="about-title">About the Project</h2>
-        <p id="about-desc">We specialize in the development, deployment, and maintenance of modern technical systems, specialized Telegram bots, and web utilities for process optimization. As part of our creative studio, we combine software solutions, server logic, and multimedia tools to automate and efficiently solve user tasks.</p>
+        <h2>About the Project</h2>
+        <p>We specialize in the development, deployment, and maintenance of modern technical systems, specialized Telegram bots, and web utilities for process optimization. As part of our creative studio, we combine software solutions, server logic, and multimedia tools to automate and efficiently solve user tasks.</p>
     </div>
 
     <div class="project-card">
-        <h2 id="contact-title">Contacts</h2>
-        <p id="contact-desc">Contact me via WhatsApp or email:</p>
+        <h2>Contacts</h2>
+        <p>Contact me via WhatsApp or email:</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://wa.me/49017661566343" id="contact-wa-btn" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">WhatsApp</a>
-            <a href="mailto:tech.chebur@gmail.com" id="contact-mail-btn" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Email</a>
+            <a href="https://wa.me/49017661566343" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">WhatsApp</a>
+            <a href="mailto:tech.chebur@gmail.com" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Email</a>
         </div>
     </div>
 
@@ -200,59 +192,43 @@
     </footer>
 
     <script>
-        const content = {
-            ru: {
-                subtitle: "Мониторинг и технические системы",
-                gpsTitle: "GPS Трекинг",
-                gpsDesc: "Система профессионального мониторинга и безопасности.",
-                panelBtn: "SOS-ID",
-                mapBtn: "Карта",
-                archTitle: "Наши Боты",
-                archDesc: "Логи, Боты, конфигурации и документация проектов.",
-                archSosBtn: "Бот таможенный калькулятор",
-                archLinkBtn: "Бот ассистент диабетика",
-                
-                new1Title: "Полезные утилиты",
-                new1Desc: "Полезные утилиты для повседневных задач и работы с контентом.",
-                new1Btn1: "Оптимизатор картинок",
-                new1Btn2: "Генератор паролей",
-                
-                new2Title: "Наша творческая мастерская",
-                new2Desc: "Создание рекламы и видеороликов.",
-                new2Btn1: "tech.med.chebur.shop",
-                new2Btn2: "Yoga.chebur.shop",
-                
-                aboutTitle: "О проекте",
-                aboutDesc: "Мы занимаемся разработкой, развертыванием и поддержкой современных технических систем, специализированных Telegram-ботов и веб-утилит для оптимизации процессов. В рамках нашей творческой мастерской мы объединяем программные решения, серверную логику, а также мультимедийные инструменты для автоматизации и эффективного решения пользовательских задач.",
-                
-                // Текст баннера для RU
-                advText: "Your ad could be here! | <span>Здесь может быть Ваша реклама!</span>",
+        /* Интерактивная логика 3D-наклона волка */
+        const logo = document.querySelector('.logo');
+        
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+            const xRotation = ((clientY - innerHeight / 2) / innerHeight) * 30;
+            const yRotation = ((clientX - innerWidth / 2) / innerWidth) * -30;
+            logo.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.05)`;
+        });
 
-                contactTitle: "Контакты",
-                contactDesc: "Свяжитесь со мной через WhatsApp или электронную почту:",
-                contactWaBtn: "WhatsApp",
-                contactMailBtn: "Email"
-            },
-            en: {
-                subtitle: "Monitoring and Technical Systems",
-                gpsTitle: "GPS Tracking",
-                gpsDesc: "Professional monitoring and security system.",
-                panelBtn: "SOS-ID",
-                mapBtn: "Map",
-                archTitle: "Our Bots",
-                archDesc: "Logs, bots, configurations, and project documentation.",
-                archSosBtn: "Customs Calculator Bot",
-                archLinkBtn: "Diabetes Assistant Bot",
-                
-                new1Title: "Useful Utilities",
-                new1Desc: "Useful tools for daily tasks and media optimization.",
-                new1Btn1: "Image Optimizer",
-                new1Btn2: "Password Generator",
-                
-                new2Title: "Our Creative Studio",
-                new2Desc: "Creation of commercials and video content.",
-                new2Btn1: "tech.med.chebur.shop",
-                new2Btn2: "Yoga.chebur.shop",
-                
-                aboutTitle: "About the Project",
-                aboutDesc: "We specialize in the development, deployment, and maintenance of modern technical systems, specialized Telegram bots, and web utilities for process optimization. As part of our creative studio, we combine software solutions, server logic, and multimedia tools to automate and efficiently solve user tasks.",
+        document.addEventListener('mouseleave', () => {
+            logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+        
+        logo.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            const { innerWidth, innerHeight } = window;
+            const xRotation = ((touch.clientY - innerHeight / 2) / innerHeight) * 20;
+            const yRotation = ((touch.clientX - innerWidth / 2) / innerWidth) * -20;
+            logo.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.05)`;
+        });
+        
+        logo.addEventListener('touchend', () => {
+            logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+
+        /* ЛОГИКА РАБОТЫ РЕКЛАМНОГО БАННЕРА */
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.getElementById('advBanner').classList.add('show');
+            }, 1500); 
+        });
+
+        function closeBanner() {
+            document.getElementById('advBanner').classList.remove('show');
+        }
+    </script>
+</body>
+</html>

@@ -182,4 +182,90 @@
         <p>Журналы событий, боты, конфигурации и проектная документация.</p>
         
         <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="
+            <a href="https://t.me/super_vanja_bot" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Бот-калькулятор таможенных пошлин</a>
+            <a href="https://t.me/Fritz_Gemeni_bot" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Бот-помощник для диабетиков</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <h2>Полезные утилиты</h2>
+        <p>Инструменты для ежедневных задач и оптимизации медиафайлов.</p>
+        
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+            <a href="https://resizer.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Оптимизатор изображений</a>
+            <a href="https://passwortgenerator.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Генератор паролей</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <h2>Наша творческая мастерская</h2>
+        <p>Создание рекламных материалов и видеоконтента.</p>
+        
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+            <a href="https://tech.med.chebur.shop" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">tech.med.chebur.shop</a>
+            <a href="https://Yoga.chebur.shop" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Yoga.chebur.shop</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <h2>О проекте</h2>
+        <p>Мы специализируемся на разработке, развертывании и поддержке современных технических систем, специализированных Telegram-ботов и веб-утилит для оптимизации процессов. В рамках нашей творческой мастерской мы объединяем программные решения, серверную логику и мультимедийные инструменты для автоматизации и эффективного решения задач пользователей.</p>
+    </div>
+
+    <div class="project-card">
+        <h2>Контакты</h2>
+        <p>Свяжитесь со мной через WhatsApp или по электронной почте:</p>
+        
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+            <a href="https://wa.me/49017661566343" style="background: #00ffff; color: #000; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">WhatsApp</a>
+            <a href="mailto:tech.chebur@gmail.com" style="border: 1px solid #00ffff; color: #00ffff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">Email</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 <a href="https://fedorcheb.chebur.shop" style="color: #00ffff; text-decoration: none; font-weight: bold;">fedorcheb.chebur.shop</a>. <span class="footer-address">Uetersen, Germany.</span>
+    </footer>
+
+    <script>
+        /* Интерактивная логика 3D-наклона волка */
+        const logo = document.querySelector('.logo');
+        
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+            const xRotation = ((clientY - innerHeight / 2) / innerHeight) * 30;
+            const yRotation = ((clientX - innerWidth / 2) / innerWidth) * -30;
+            logo.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.05)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+        
+        logo.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            const { innerWidth, innerHeight } = window;
+            const xRotation = ((touch.clientY - innerHeight / 2) / innerHeight) * 20;
+            const yRotation = ((touch.clientX - innerWidth / 2) / innerWidth) * -20;
+            logo.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.05)`;
+        });
+        
+        logo.addEventListener('touchend', () => {
+            logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+
+        /* ЛОГИКА РАБОТЫ РЕКЛАМНОГО БАННЕРА */
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.getElementById('advBanner').classList.add('show');
+            }, 1500); 
+        });
+
+        function closeBanner(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            document.getElementById('advBanner').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
